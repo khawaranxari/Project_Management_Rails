@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: complete_app_development
+  username: postgres
+  password: postgres
+
+production:
+  database: <%= ENV["DATABASE_URL"]%>
+development:
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: project_management_development
+  username: postgres
+  password: postgres
+
+production:
+  database: <%= ENV["DATABASE_URL"]%>
